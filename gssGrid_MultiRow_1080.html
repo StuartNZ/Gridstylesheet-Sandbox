@@ -1,102 +1,117 @@
-﻿
+
 <!DOCTYPE html>
 <html lang="en" class="gss-not-ready">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Apple-style panel and buttons | GSS</title>
+    <title>MultiRow Grid V1.0 | GSS</title>
     <link rel="shortcut icon" href="/favicon.ico">
     <style>
-    .gss-not-ready body {
-      opacity: 0;
-    }
-    .gss-ready body {
-      opacity: 1;
-    }
+        .gss-not-ready body {
+            opacity: 0;
+        }
+
+        .gss-ready body {
+            opacity: 1;
+        }
     </style>
-      <style id="rules" type="text/gss" contenteditable>
-          /* vars */
+    <style id="rules" type="text/gss" contenteditable>
+        /* vars */
 
-          [gap] == 18 !require;
-          /* panel */
-          #panel {
-              width: == ::window[width] - 30;
-              width: <= 1080;
-              height: == ::window[height] - 48;
-              center-x: == ::window[center-x];
-             
-          }
+        [gap] == 18 !require;
+        
+        /* styles */
+        #panel {
+            width: == ::window[width] - 30;
+            width: <= 1080;
+            height: == ::window[height] - 48;
+            center-x: == ::window[center-x];
+            padding-top: 20px;
+        }
 
-          /* panel */
-          .pane {
-              width: == 100;
-              width: <= 100;
-              height: == ::window[height] - 48;
-              height: <= 100 !require;
-              height: >= 100 !require;
-              background-color: red;
-              float: left;
-              margin-left: 20px;
-              margin-bottom: 20px;
-          }
+        .pane {
+            width: == 100;
+            width: <= 100;
+            height: == ::window[height] - 48;
+            height: <= 100 !require;
+            height: >= 100 !require;
+            background-color: red;
+            float: left;
+            margin-left: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
 
-          /* buttons */
+        button {
+            width: == ::[intrinsic-width] !require;
+            height: == ::[intrinsic-height] !require;
+        }
 
-          button {
-              width: == ::[intrinsic-width] !require;
-              height: == ::[intrinsic-height] !require;
-          }
+        #rules {
+            display: block;
+            white-space: pre;
+            overflow-y: scroll;
+        }
+
+        .linearBg2 {
+            /* fallback */
+            background-color: #1a82f7;
+            background: url(images/linear_bg_2.png);
+            background-repeat: repeat-x;
+            /* Safari 4-5, Chrome 1-9 */
+            background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#1a82f7), to(#2F2727));
+            /* Safari 5.1, Chrome 10+ */
+            background: -webkit-linear-gradient(top, #2F2727, #1a82f7);
+            /* Firefox 3.6+ */
+            background: -moz-linear-gradient(top, #2F2727, #1a82f7);
+            /* IE 10 */
+            background: -ms-linear-gradient(top, #2F2727, #1a82f7);
+            /* Opera 11.10+ */
+            background: -o-linear-gradient(top, #2F2727, #1a82f7);
+        }
+    </style>
 
 
+</head>
+<body class="style-a">
 
-          /* rules */
-
-          #rules {
-              display: block;
-              white-space: pre;
-              overflow-y: scroll;
-          }
-      </style>
-
-
-  </head>
-  <body class="style-a">
-    
     <script>
-    GSS_CONFIG = {
-      worker: "/bower_components/gss/dist/worker.js",
-      fractionalPixels: false,
-      resizeDebounce: 16, // (ms)
-      debug: false,
-      verticalScroll: false
-    }
+        GSS_CONFIG = {
+            worker: "/bower_components/gss/dist/worker.js",
+            fractionalPixels: false,
+            resizeDebounce: 16, // (ms)
+            debug: false,
+            verticalScroll: false
+        }
     </script>
     <script src="/bower_components/gss/dist/gss.js"></script>
-    
+
     <link rel="stylesheet" href="/assets/css/bootstrap.css" type="text/css">
-<link rel="stylesheet" href="/assets/css/texture.css" type="text/css">
+    <link rel="stylesheet" href="/assets/css/texture.css" type="text/css">
 
-<div id="panel">
-    <div class="pane"></div>
-    <div class="pane"></div>
-    <div class="pane"></div>
-    <div class="pane"></div>
-    <div class="pane"></div>
-    <div class="pane"></div>
-    <div class="pane"></div>
-    <div class="pane"></div>
-    <div class="pane"></div>
-    <div class="pane"></div>
-    <div class="pane"></div>
-    <div class="pane"></div>
-    <div class="pane"></div>
-    <div class="pane"></div>
-    <div class="pane"></div>
-    <div class="pane"></div>
-</div>
-
-
- 
-    
-  </body>
+    <div id="panel">
+        <div class="pane linearBg2"></div>
+        <div class="pane linearBg2"></div>
+        <div class="pane linearBg2"></div>
+        <div class="pane linearBg2"></div>
+        <div class="pane linearBg2"></div>
+        <div class="pane linearBg2"></div>
+        <div class="pane linearBg2"></div>
+        <div class="pane linearBg2"></div>
+        <div class="pane linearBg2"></div>
+        <div class="pane linearBg2"></div>
+        <div class="pane linearBg2"></div>
+        <div class="pane linearBg2"></div>
+        <div class="pane linearBg2"></div>
+        <div class="pane linearBg2"></div>
+        <div class="pane linearBg2"></div>
+        <div class="pane linearBg2"></div>
+        <div class="pane linearBg2"></div>
+        <div class="pane linearBg2"></div>
+        <div class="pane linearBg2"></div>
+        <div class="pane linearBg2"></div>
+        <div class="pane linearBg2"></div>
+        <div class="pane linearBg2"></div>
+    </div>
+</body>
 </html>
