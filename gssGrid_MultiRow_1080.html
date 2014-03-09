@@ -1,0 +1,102 @@
+﻿
+<!DOCTYPE html>
+<html lang="en" class="gss-not-ready">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Apple-style panel and buttons | GSS</title>
+    <link rel="shortcut icon" href="/favicon.ico">
+    <style>
+    .gss-not-ready body {
+      opacity: 0;
+    }
+    .gss-ready body {
+      opacity: 1;
+    }
+    </style>
+      <style id="rules" type="text/gss" contenteditable>
+          /* vars */
+
+          [gap] == 18 !require;
+          /* panel */
+          #panel {
+              width: == ::window[width] - 30;
+              width: <= 1080;
+              height: == ::window[height] - 48;
+              center-x: == ::window[center-x];
+             
+          }
+
+          /* panel */
+          .pane {
+              width: == 100;
+              width: <= 100;
+              height: == ::window[height] - 48;
+              height: <= 100 !require;
+              height: >= 100 !require;
+              background-color: red;
+              float: left;
+              margin-left: 20px;
+              margin-bottom: 20px;
+          }
+
+          /* buttons */
+
+          button {
+              width: == ::[intrinsic-width] !require;
+              height: == ::[intrinsic-height] !require;
+          }
+
+
+
+          /* rules */
+
+          #rules {
+              display: block;
+              white-space: pre;
+              overflow-y: scroll;
+          }
+      </style>
+
+
+  </head>
+  <body class="style-a">
+    
+    <script>
+    GSS_CONFIG = {
+      worker: "/bower_components/gss/dist/worker.js",
+      fractionalPixels: false,
+      resizeDebounce: 16, // (ms)
+      debug: false,
+      verticalScroll: false
+    }
+    </script>
+    <script src="/bower_components/gss/dist/gss.js"></script>
+    
+    <link rel="stylesheet" href="/assets/css/bootstrap.css" type="text/css">
+<link rel="stylesheet" href="/assets/css/texture.css" type="text/css">
+
+<div id="panel">
+    <div class="pane"></div>
+    <div class="pane"></div>
+    <div class="pane"></div>
+    <div class="pane"></div>
+    <div class="pane"></div>
+    <div class="pane"></div>
+    <div class="pane"></div>
+    <div class="pane"></div>
+    <div class="pane"></div>
+    <div class="pane"></div>
+    <div class="pane"></div>
+    <div class="pane"></div>
+    <div class="pane"></div>
+    <div class="pane"></div>
+    <div class="pane"></div>
+    <div class="pane"></div>
+</div>
+
+
+ 
+    
+  </body>
+</html>
